@@ -24,13 +24,8 @@ export default function MenuSection() {
   const [selectedDish, setSelectedDish] = useState<MenuItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Static data for deployment  
-  const { data: allMenuItems, isLoading } = useQuery({
-    queryKey: ["menu"],
-    queryFn: async () => {
-      const { staticAPI } = await import("@/lib/staticApi");
-      return staticAPI.getMenu();
-    },
+  const { data: allMenuItems, isLoading } = useQuery<MenuItem[]>({
+    queryKey: ["/api/menu"],
   });
 
   const handleAddToCart = async (item: MenuItem) => {

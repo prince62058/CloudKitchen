@@ -14,13 +14,8 @@ export default function FeaturedDishes() {
   const [selectedDish, setSelectedDish] = useState<MenuItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Static data for deployment
-  const { data: featuredItems, isLoading } = useQuery({
-    queryKey: ["featured"],
-    queryFn: async () => {
-      const { staticAPI } = await import("@/lib/staticApi");
-      return staticAPI.getFeatured();
-    },
+  const { data: featuredItems, isLoading } = useQuery<MenuItem[]>({
+    queryKey: ["/api/featured"],
   });
 
   const handleAddToCart = async (item: MenuItem) => {
