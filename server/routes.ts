@@ -1,6 +1,6 @@
 
 import express, { type Request, type Response } from "express";
-import { menuData } from "@shared/menuData";
+import { menuData } from "../shared/menuData";
 
 const router = express.Router();
 
@@ -39,7 +39,7 @@ router.get("/menu/:category", async (req: Request, res: Response) => {
   }
 });
 
-// Get featured items (one from each category)
+// Get featured items
 router.get("/featured", async (req: Request, res: Response) => {
   try {
     const categories = ['indian', 'chinese', 'italian', 'desserts', 'south-indian'];
@@ -60,10 +60,5 @@ router.get("/featured", async (req: Request, res: Response) => {
     res.status(500).json({ error: 'Failed to fetch featured items' });
   }
 });
-
-export function registerRoutes(app: any) {
-  app.use('/api', router);
-  return app;
-}
 
 export default router;
