@@ -1,4 +1,3 @@
-
 import express, { type Request, type Response } from "express";
 import { createServer } from "http";
 import { menuData } from "../shared/menuData";
@@ -17,35 +16,33 @@ router.get("/menu", async (req: Request, res: Response) => {
   }
 });
 
-// Get menu items by category
-router.get("/menu/:category", async (req: Request, res: Response) => {
+router.get("/api/menu/:category", async (req: Request, res: Response) => {
   try {
     const { category } = req.params;
-    const items = menuData.filter(item => 
-      item.category === category && item.isAvailable === "true"
+    const categoryItems = menuData.filter(item => 
+      item.category.toLowerCase() === category.toLowerCase()
     );
-    res.json(items);
+    res.json(categoryItems);
   } catch (error) {
-    console.error('Error fetching menu items by category:', error);
-    res.status(500).json({ error: 'Failed to fetch menu items by category' });
+    console.error('Error fetching category items:', error);
+    res.status(500).json({ error: 'Failed to fetch menu items' });
   }
 });
 
-// Get featured items
-router.get("/featured", async (req: Request, res: Response) => {
+router.get("/api/featured", async (req: Request, res: Response) => {
   try {
     const categories = ['indian', 'chinese', 'italian', 'desserts', 'south-indian'];
     const featured: any[] = [];
-    
+
     categories.forEach(category => {
       const categoryItems = menuData.filter(item => 
-        item.category === category && item.isAvailable === "true"
+        item.category.toLowerCase() === category.toLowerCase()
       );
       if (categoryItems.length > 0) {
-        featured.push(categoryItems[0]);
+        featured.push(categoryItems[0]); // First item from each category
       }
     });
-    
+
     res.json(featured);
   } catch (error) {
     console.error('Error fetching featured items:', error);
@@ -53,10 +50,6 @@ router.get("/featured", async (req: Request, res: Response) => {
   }
 });
 
-export function registerRoutes(app: express.Express) {
-  app.use("/api", router);
-  const server = createServer(app);
-  return Promise.resolve(server);
+export function registerRoutes(app: express.Application) {
+  app.use(router);
 }
-
-export default router;
