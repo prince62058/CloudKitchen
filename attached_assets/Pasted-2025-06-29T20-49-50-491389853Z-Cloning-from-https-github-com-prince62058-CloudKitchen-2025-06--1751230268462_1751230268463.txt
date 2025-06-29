@@ -1,0 +1,75 @@
+2025-06-29T20:49:50.491389853Z ==> Cloning from https://github.com/prince62058/CloudKitchen
+2025-06-29T20:49:50.971218252Z ==> Checking out commit 17c8e3ad0f7b32f37aeb9c47543425abdfc8216f in branch main
+2025-06-29T20:49:52.504660419Z ==> Installing dependencies with npm...
+2025-06-29T20:49:52.607078283Z ==> Using Node.js version 22.16.0 (default)
+2025-06-29T20:49:52.632058929Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2025-06-29T20:49:54.488732179Z ==> Using Bun version 1.1.0 (default)
+2025-06-29T20:49:54.488756869Z ==> Docs on specifying a Bun version: https://render.com/docs/bun-version
+2025-06-29T20:50:02.522522838Z 
+2025-06-29T20:50:02.522554029Z added 513 packages, and audited 514 packages in 8s
+2025-06-29T20:50:02.522569899Z 
+2025-06-29T20:50:02.522573249Z 67 packages are looking for funding
+2025-06-29T20:50:02.522576209Z   run `npm fund` for details
+2025-06-29T20:50:02.54522543Z 
+2025-06-29T20:50:02.54524854Z 9 vulnerabilities (1 low, 8 moderate)
+2025-06-29T20:50:02.54525156Z 
+2025-06-29T20:50:02.545254621Z To address issues that do not require attention, run:
+2025-06-29T20:50:02.54525689Z   npm audit fix
+2025-06-29T20:50:02.545258861Z 
+2025-06-29T20:50:02.545261091Z To address all issues (including breaking changes), run:
+2025-06-29T20:50:02.545263961Z   npm audit fix --force
+2025-06-29T20:50:02.545265881Z 
+2025-06-29T20:50:02.545268611Z Run `npm audit` for details.
+2025-06-29T20:50:03.772602543Z 
+2025-06-29T20:50:03.772633634Z up to date, audited 514 packages in 1s
+2025-06-29T20:50:03.772649034Z 
+2025-06-29T20:50:03.772653265Z 67 packages are looking for funding
+2025-06-29T20:50:03.772657474Z   run `npm fund` for details
+2025-06-29T20:50:03.794496726Z 
+2025-06-29T20:50:03.794524496Z 9 vulnerabilities (1 low, 8 moderate)
+2025-06-29T20:50:03.794528627Z 
+2025-06-29T20:50:03.794532956Z To address issues that do not require attention, run:
+2025-06-29T20:50:03.794536497Z   npm audit fix
+2025-06-29T20:50:03.794539827Z 
+2025-06-29T20:50:03.794543407Z To address all issues (including breaking changes), run:
+2025-06-29T20:50:03.794547457Z   npm audit fix --force
+2025-06-29T20:50:03.794551597Z 
+2025-06-29T20:50:03.794558247Z Run `npm audit` for details.
+2025-06-29T20:50:03.818488488Z ==> Running build command 'npm install; npm run build'...
+2025-06-29T20:50:04.884672476Z 
+2025-06-29T20:50:04.884700586Z up to date, audited 514 packages in 976ms
+2025-06-29T20:50:04.884716527Z 
+2025-06-29T20:50:04.884722177Z 67 packages are looking for funding
+2025-06-29T20:50:04.884727007Z   run `npm fund` for details
+2025-06-29T20:50:04.906323082Z 
+2025-06-29T20:50:04.906348473Z 9 vulnerabilities (1 low, 8 moderate)
+2025-06-29T20:50:04.906352683Z 
+2025-06-29T20:50:04.906357403Z To address issues that do not require attention, run:
+2025-06-29T20:50:04.906361003Z   npm audit fix
+2025-06-29T20:50:04.906364303Z 
+2025-06-29T20:50:04.906367733Z To address all issues (including breaking changes), run:
+2025-06-29T20:50:04.906375134Z   npm audit fix --force
+2025-06-29T20:50:04.906378563Z 
+2025-06-29T20:50:04.906382703Z Run `npm audit` for details.
+2025-06-29T20:50:05.063535503Z 
+2025-06-29T20:50:05.063559824Z > rest-express@1.0.0 build
+2025-06-29T20:50:05.063566854Z > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+2025-06-29T20:50:05.063572614Z 
+2025-06-29T20:50:05.275601883Z vite v5.4.19 building for production...
+2025-06-29T20:50:05.336647439Z transforming...
+2025-06-29T20:50:05.61878531Z Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
+2025-06-29T20:50:05.618817051Z   npx update-browserslist-db@latest
+2025-06-29T20:50:05.618820251Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2025-06-29T20:50:09.605413573Z ✓ 2057 modules transformed.
+2025-06-29T20:50:09.877226209Z rendering chunks...
+2025-06-29T20:50:09.890499925Z computing gzip size...
+2025-06-29T20:50:09.904818287Z ../dist/public/index.html                   1.05 kB │ gzip:   0.61 kB
+2025-06-29T20:50:09.904888889Z ../dist/public/assets/index-D2gSmHUF.css   69.10 kB │ gzip:  12.18 kB
+2025-06-29T20:50:09.905067243Z ../dist/public/assets/index-ChmgCNFo.js   465.71 kB │ gzip: 146.42 kB
+2025-06-29T20:50:09.90536296Z ✓ built in 4.60s
+2025-06-29T20:50:09.951825128Z 
+2025-06-29T20:50:09.951849629Z   dist/index.js  18.5kb
+2025-06-29T20:50:09.951852989Z 
+2025-06-29T20:50:09.951855979Z ⚡ Done in 4ms
+2025-06-29T20:50:11.637883774Z ==> Uploading build...
+2025-06-29T20:50:18.588905486Z ==> Your site is live 🎉

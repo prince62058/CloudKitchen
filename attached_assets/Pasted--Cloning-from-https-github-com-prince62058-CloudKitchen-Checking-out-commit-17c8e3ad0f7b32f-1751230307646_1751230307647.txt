@@ -1,0 +1,53 @@
+==> Cloning from https://github.com/prince62058/CloudKitchen
+==> Checking out commit 17c8e3ad0f7b32f37aeb9c47543425abdfc8216f in branch main
+==> Installing dependencies with npm...
+==> Using Node.js version 22.16.0 (default)
+==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+==> Using Bun version 1.1.0 (default)
+==> Docs on specifying a Bun version: https://render.com/docs/bun-version
+added 513 packages, and audited 514 packages in 8s
+67 packages are looking for funding
+  run `npm fund` for details
+9 vulnerabilities (1 low, 8 moderate)
+To address issues that do not require attention, run:
+  npm audit fix
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+Run `npm audit` for details.
+up to date, audited 514 packages in 1s
+67 packages are looking for funding
+  run `npm fund` for details
+9 vulnerabilities (1 low, 8 moderate)
+To address issues that do not require attention, run:
+  npm audit fix
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+Run `npm audit` for details.
+==> Running build command 'npm install; npm run build'...
+up to date, audited 514 packages in 976ms
+67 packages are looking for funding
+  run `npm fund` for details
+9 vulnerabilities (1 low, 8 moderate)
+To address issues that do not require attention, run:
+  npm audit fix
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+Run `npm audit` for details.
+> rest-express@1.0.0 build
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+vite v5.4.19 building for production...
+transforming...
+Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✓ 2057 modules transformed.
+rendering chunks...
+computing gzip size...
+../dist/public/index.html                   1.05 kB │ gzip:   0.61 kB
+../dist/public/assets/index-D2gSmHUF.css   69.10 kB │ gzip:  12.18 kB
+../dist/public/assets/index-ChmgCNFo.js   465.71 kB │ gzip: 146.42 kB
+✓ built in 4.60s
+  dist/index.js  18.5kb
+⚡ Done in 4ms
+==> Uploading build...
+==> Your site is live 🎉
