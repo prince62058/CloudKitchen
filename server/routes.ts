@@ -2,18 +2,9 @@
 import express, { type Request, type Response } from "express";
 import { createServer } from "http";
 import { menuData } from "../shared/menuData";
+import type { MenuItem } from "../shared/schema";
 
 const router = express.Router();
-
-interface MenuItem {
-  id: number;
-  name: string;
-  description: string;
-  price: string;
-  category: string;
-  image: string;
-  isAvailable: string;
-}
 
 // Get all menu items
 router.get("/menu", async (req: Request, res: Response) => {
@@ -44,7 +35,7 @@ router.get("/menu/:category", async (req: Request, res: Response) => {
 router.get("/featured", async (req: Request, res: Response) => {
   try {
     const categories = ['indian', 'chinese', 'italian', 'desserts', 'south-indian'];
-    const featured: MenuItem[] = [];
+    const featured: any[] = [];
     
     categories.forEach(category => {
       const categoryItems = menuData.filter(item => 
