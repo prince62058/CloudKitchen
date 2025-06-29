@@ -1,5 +1,6 @@
 
 import express, { type Request, type Response } from "express";
+import { createServer } from "http";
 import { menuData } from "../shared/menuData";
 
 const router = express.Router();
@@ -60,5 +61,11 @@ router.get("/featured", async (req: Request, res: Response) => {
     res.status(500).json({ error: 'Failed to fetch featured items' });
   }
 });
+
+export function registerRoutes(app: express.Express) {
+  app.use("/api", router);
+  const server = createServer(app);
+  return Promise.resolve(server);
+}
 
 export default router;
