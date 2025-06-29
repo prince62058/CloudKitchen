@@ -6,7 +6,7 @@ import type { MenuItem } from "../shared/schema";
 const router = express.Router();
 
 // Get all menu items
-router.get("/menu", async (req: Request, res: Response) => {
+router.get("/api/menu", async (req: Request, res: Response) => {
   try {
     const items = menuData.filter(item => item.isAvailable === "true");
     res.json(items);
@@ -51,5 +51,5 @@ router.get("/api/featured", async (req: Request, res: Response) => {
 });
 
 export function registerRoutes(app: express.Application) {
-  app.use(router);
+  app.use("/api", router);
 }

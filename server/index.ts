@@ -25,8 +25,18 @@ app.use((req, res, next) => {
 // Register API routes
 registerRoutes(app);
 
-// Serve static files from dist/public (for production)
-if (process.env.NODE_ENV === 'production') {
+// Serve static files from client (for development) 
+if (process.env.NODE_ENV !== 'production') {
+  app.use(express.static(path.join(__dirname, "../client")));
+  
+  // Serve React app for all other routes in development
+  app.get("*", (req, res) => {
+    if (!req.path.startsWith('/api')) {
+      res.sendFile(path.join(__dirname, "../client/index.html"));
+    }
+  });
+} else {
+  // Serve static files from dist/public (for production)
   app.use(express.static(path.join(__dirname, "../dist/public")));
   
   // Serve React app for all other routes
