@@ -6,6 +6,7 @@ import { Plus, Eye } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import DishImageModal from "./dish-image-modal";
+import OptimizedImage from "./optimized-image";
 import type { MenuItem } from "@shared/schema";
 
 export default function FeaturedDishes() {
@@ -90,15 +91,11 @@ export default function FeaturedDishes() {
             >
               <Card className="food-card-3d bg-white rounded-2xl shadow-lg hover:shadow-xl overflow-hidden border-0">
                 <div className="relative overflow-hidden image-container group cursor-pointer" onClick={() => handleImageClick(item)}>
-                  <img 
+                  <OptimizedImage
                     src={item.image} 
                     alt={item.name}
                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                     loading="lazy"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600";
-                    }}
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-3">

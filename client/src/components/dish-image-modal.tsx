@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { X, Plus, Heart, Share2, ZoomIn, Star } from "lucide-react";
+import OptimizedImage from "./optimized-image";
 import type { MenuItem } from "@shared/schema";
 
 interface DishImageModalProps {
