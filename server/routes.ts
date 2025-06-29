@@ -50,6 +50,8 @@ router.get("/api/featured", async (req: Request, res: Response) => {
   }
 });
 
-export function registerRoutes(app: express.Application) {
+export async function registerRoutes(app: express.Application) {
   app.use("/api", router);
+  const server = createServer(app);
+  return server;
 }
